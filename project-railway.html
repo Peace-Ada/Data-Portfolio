@@ -197,16 +197,18 @@ footer span{color:var(--teal)}
         </div>
 </div>
 
-<div class="section-bg0">
-  <div class="inner">
+<div class="section-bg0" style="width: 100%; overflow: hidden;">
+  <div class="inner" style="max-width: 100%; padding: 0 1rem; box-sizing: border-box;">
     <div class="inner-title">Dashboard &amp; Visualisations</div>
     <p style="font-size:0.84rem;color:var(--txt2);max-width:560px;line-height:1.88;margin-bottom:1.8rem">The dashboard below is the final deliverable — built to be clear and usable by someone with no data background.</p>
     
-    <div style="display:grid;gap:1.4rem">
-      <div>
-        <div class="img-slot" style="min-height:260px; display:flex; justify-content:center; align-items:center;">
+    <div style="display:grid; gap:1.4rem; width:100%;">
+      <div style="width: 100%; min-width: 0;">
+        <!-- Fixed: Added width controls and removed tight height limits -->
+        <div class="img-slot" style="width: 100%; display:flex; justify-content:center; align-items:center; overflow:hidden;">
           
-          <img src="railway-dashboard.png" alt="Dashboard Overview" style="max-width:100%; height:auto; display:block; border-radius:4px;">
+          <!-- Fixed: Object-fit and max-width ensure it shrinks into the screen space -->
+          <img src="railway-dashboard.png" alt="Dashboard Overview" style="max-width:100%; max-height:75vh; height:auto; object-fit:contain; display:block; border-radius:4px;">
         
         </div>
         <p style="font-size:0.67rem;color:var(--txt3);text-align:center;letter-spacing:0.08em;margin-top:0.6rem;padding:0 0.5rem">Dashboard Overview — KPI cards, delay by station, cancellation and refund rates</p>
