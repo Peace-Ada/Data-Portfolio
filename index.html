@@ -4,7 +4,6 @@
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>Peace Adaobi — Data Analyst</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -22,8 +21,6 @@ body::before{content:'';position:fixed;inset:0;
   linear-gradient(90deg,rgba(56,189,248,0.013) 1px,transparent 1px);
   background-size:80px 80px;pointer-events:none;z-index:0;
   mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black 20%,transparent 100%)}
-
-/* NAV */
 nav{position:sticky;top:0;z-index:200;background:rgba(7,16,30,0.93);
   backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);
   padding:0 3rem;display:flex;align-items:center;justify-content:space-between;height:62px}
@@ -34,18 +31,12 @@ nav{position:sticky;top:0;z-index:200;background:rgba(7,16,30,0.93);
 .nav-links a{font-size:0.68rem;color:var(--txt2);text-decoration:none;
   letter-spacing:0.14em;text-transform:uppercase;transition:color .2s}
 .nav-links a:hover{color:var(--teal)}
-.nav-back{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.68rem;
-  color:var(--txt2);text-decoration:none;letter-spacing:0.12em;text-transform:uppercase;
-  transition:color .2s}
-.nav-back:hover{color:var(--teal)}
-
-/* UTILS */
 section{padding:5rem 3rem;position:relative;z-index:1}
 .sec-label{font-size:0.6rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;
   color:var(--teal);margin-bottom:0.5rem}
 .sec-title{font-family:'Cormorant Garamond',serif;font-size:clamp(1.9rem,3.5vw,2.9rem);
   font-weight:600;color:var(--txt);margin-bottom:0.45rem;line-height:1.12}
-.sec-sub{font-size:0.87rem;color:var(--txt2);max-width:560px;margin-bottom:2.8rem;line-height:1.9}
+.sec-sub{font-size:0.87rem;color:var(--txt2);max-width:600px;margin-bottom:2.8rem;line-height:1.9}
 .divider{width:36px;height:1.5px;background:linear-gradient(90deg,var(--teal),transparent);margin-bottom:1.6rem}
 .tag{font-size:0.58rem;padding:0.16rem 0.6rem;border-radius:2px;
   background:var(--teal-dim);color:var(--teal);border:1px solid var(--teal-bdr);
@@ -63,29 +54,11 @@ section{padding:5rem 3rem;position:relative;z-index:1}
 footer{background:var(--bg);text-align:center;padding:1.7rem;font-size:0.66rem;
   color:var(--txt3);border-top:1px solid var(--bdr);letter-spacing:0.1em;position:relative;z-index:1}
 footer span{color:var(--teal)}
-
-/* screenshot slot */
-.img-slot{background:rgba(255,255,255,0.025);border:1.5px dashed rgba(56,189,248,0.2);
-  border-radius:8px;min-height:200px;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:0.6rem;padding:1.5rem;text-align:center}
-.img-slot-icon{font-size:1.6rem;color:var(--teal);opacity:0.4}
-.img-slot-text{font-size:0.62rem;color:var(--txt3);letter-spacing:0.12em;text-transform:uppercase;line-height:1.8}
-.img-slot-text strong{display:block;color:rgba(56,189,248,0.55);font-size:0.65rem;margin-bottom:0.2rem}
-.img-slot img{width:100%;height:auto;border-radius:6px;display:block}
-
-@media(max-width:820px){
-  nav{padding:0 1.4rem}
-  section{padding:3.5rem 1.4rem}
-}
-</style>
-
-<style>
-/* HERO */
 .hero{min-height:96vh;display:grid;grid-template-columns:1fr 270px;
   align-items:center;gap:4rem;padding:7rem 3rem 5rem;
   background:radial-gradient(ellipse 65% 70% at 0% 70%,rgba(15,31,61,.55) 0%,transparent 65%),
   radial-gradient(ellipse 40% 40% at 92% 15%,rgba(56,189,248,.04) 0%,transparent 60%),var(--bg);
-  position:relative;overflow:hidden}
+  position:relative;overflow:hidden;z-index:1}
 .hero-left{position:relative;z-index:1}
 .hero-pill{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.64rem;
   font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);
@@ -105,41 +78,24 @@ footer span{color:var(--teal)}
   color:var(--teal2);display:block;line-height:1}
 .stat-l{font-size:0.58rem;color:var(--txt3);text-transform:uppercase;letter-spacing:0.12em;
   margin-top:0.3rem;display:block}
-/* profile placeholder */
 .hero-right{position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
-.profile-frame{width:240px;height:300px;border:1px solid var(--teal-bdr);border-radius:6px;
-  background:linear-gradient(155deg,rgba(15,31,61,.55) 0%,rgba(7,16,30,.85) 100%);
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:0.9rem;position:relative;overflow:hidden}
-.profile-frame::before{content:'';position:absolute;inset:8px;
-  border:1px dashed rgba(56,189,248,.12);border-radius:4px;pointer-events:none}
-.profile-icon{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--teal-bdr);
-  background:var(--teal-dim);display:flex;align-items:center;justify-content:center;
-  font-size:1.6rem}
-.profile-txt{font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;
-  color:var(--txt3);text-align:center;line-height:1.9}
-.profile-txt strong{display:block;color:var(--teal);font-size:0.64rem;margin-bottom:0.2rem}
-
-/* PROJECTS GRID */
+.profile-frame{width:240px;height:300px;border:1px solid var(--teal-bdr);border-radius:6px;overflow:hidden;
+  display:flex;align-items:center;justify-content:center}
 #projects{background:radial-gradient(ellipse 60% 60% at 90% 40%,rgba(15,31,61,.4) 0%,transparent 65%),var(--bg1);
   border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
 .proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
 .proj-card{background:var(--card);border:1px solid var(--bdr);border-radius:12px;
-  overflow:hidden;display:flex;flex-direction:column;
-  transition:transform .25s,border-color .25s,background .25s}
+  overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,background .25s}
 .proj-card:hover{transform:translateY(-4px);border-color:var(--teal-bdr);background:var(--cardhov)}
-.proj-card-thumb{height:130px;display:flex;align-items:center;justify-content:center;
-  font-size:2.4rem;position:relative}
+.proj-card-thumb{height:130px;display:flex;align-items:center;justify-content:center;font-size:2.4rem;position:relative}
 .thumb-c{background:linear-gradient(135deg,rgba(10,28,55,.95),rgba(15,40,75,.98))}
 .thumb-r{background:linear-gradient(135deg,rgba(10,28,24,.95),rgba(12,40,32,.98))}
 .thumb-f{background:linear-gradient(135deg,rgba(28,18,8,.95),rgba(45,28,8,.98))}
 .thumb-s{background:linear-gradient(135deg,rgba(15,15,35,.95),rgba(22,22,50,.98))}
-.proj-num{position:absolute;top:12px;left:14px;font-size:0.58rem;color:var(--txt3);
-  letter-spacing:0.18em;text-transform:uppercase}
+.proj-num{position:absolute;top:12px;left:14px;font-size:0.58rem;color:var(--txt3);letter-spacing:0.18em;text-transform:uppercase}
 .proj-tool{position:absolute;top:12px;right:12px;font-size:0.58rem;font-weight:700;
   letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:2px}
 .tool-xl{background:rgba(30,140,70,.2);color:#80d4a0;border:1px solid rgba(128,212,160,.18)}
-.tool-pbi{background:rgba(200,100,20,.2);color:#f0c070;border:1px solid rgba(240,192,112,.18)}
 .tool-sql{background:rgba(56,120,220,.2);color:#88b4f0;border:1px solid rgba(136,180,240,.18)}
 .proj-body{padding:1.5rem 1.6rem 1.8rem;flex:1;display:flex;flex-direction:column}
 .proj-title{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:700;
@@ -155,22 +111,32 @@ footer span{color:var(--teal)}
   letter-spacing:0.07em;text-transform:uppercase;border-bottom:1px solid var(--teal-bdr);
   padding-bottom:2px;transition:color .2s;align-self:flex-start}
 .proj-cta:hover{color:var(--teal)}
-
-/* SKILLS strip */
 #skills{background:var(--bg)}
-.skills-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:1px;border:1px solid var(--bdr);border-radius:var(--radius);overflow:hidden}
-.sk{background:var(--card);padding:1.5rem 1.4rem;transition:background .25s}
-.sk:hover{background:var(--cardhov)}
-.sk-icon{font-size:1.2rem;margin-bottom:0.8rem;display:block}
-.sk-name{font-weight:700;font-size:0.83rem;color:var(--txt);margin-bottom:0.22rem}
-.sk-desc{font-size:0.67rem;color:var(--txt3);line-height:1.6}
-.sk-bar{height:2px;background:rgba(255,255,255,.05);border-radius:2px;margin-top:1rem}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+.sk{background:var(--card);border:1px solid var(--bdr);border-radius:var(--radius);
+  padding:1.8rem 1.6rem;transition:background .25s,border-color .25s}
+.sk:hover{background:var(--cardhov);border-color:var(--teal-bdr)}
+.sk-icon{font-size:1.4rem;margin-bottom:1rem;display:block}
+.sk-name{font-weight:700;font-size:0.88rem;color:var(--txt);margin-bottom:0.4rem}
+.sk-desc{font-size:0.72rem;color:var(--txt2);line-height:1.7;margin-bottom:0.5rem}
+.sk-tools{font-size:0.67rem;color:var(--txt3);line-height:1.65}
+.sk-bar{height:2px;background:rgba(255,255,255,.05);border-radius:2px;margin-top:1.1rem}
 .sk-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),var(--teal2));
   box-shadow:0 0 8px rgba(56,189,248,.22)}
-
-/* ABOUT */
-#about{background:var(--bg1);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+#experience{background:var(--bg1);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.exp-card{background:var(--card);border:1px solid var(--bdr);border-left:2.5px solid var(--teal);
+  border-radius:4px;padding:2rem 2.5rem;max-width:820px;margin-bottom:1.4rem}
+.exp-card:last-child{margin-bottom:0}
+.exp-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:0.3rem}
+.exp-company{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--txt)}
+.exp-role{font-size:0.72rem;color:var(--txt3);letter-spacing:0.12em;text-transform:uppercase;margin-top:0.25rem;margin-bottom:1.1rem}
+.exp-period{font-size:0.66rem;color:var(--teal);border:1px solid var(--teal-bdr);
+  background:var(--teal-dim);padding:0.22rem 0.75rem;border-radius:2px;letter-spacing:0.1em;white-space:nowrap}
+.exp-p{font-size:0.86rem;color:var(--txt2);line-height:1.88;margin-bottom:1.1rem}
+.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:0.5rem}
+.exp-bullets li{font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative}
+.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--teal)}
+#about{background:var(--bg)}
 .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:5rem;align-items:start}
 .about-degree{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.7rem;
   color:var(--txt3);border:1px solid var(--bdr);background:var(--card);
@@ -186,8 +152,6 @@ footer span{color:var(--teal)}
 .hi-icon{font-size:1rem;flex-shrink:0;margin-top:2px}
 .hi-title{font-weight:700;font-size:0.82rem;color:var(--txt)}
 .hi-sub{font-size:0.71rem;color:var(--txt3);margin-top:0.18rem;line-height:1.55}
-
-/* CONTACT */
 #contact{background:radial-gradient(ellipse 70% 80% at 50% 100%,rgba(15,31,61,.55) 0%,transparent 70%),var(--bg);text-align:center}
 #contact .sec-sub{margin:0 auto 2.5rem}
 .contact-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
@@ -195,12 +159,14 @@ footer span{color:var(--teal)}
   border-radius:4px;border:1px solid var(--bdr);color:var(--txt2);font-size:0.8rem;
   font-weight:500;text-decoration:none;transition:background .2s,border-color .2s,color .2s}
 .clink:hover{background:var(--teal-dim);border-color:var(--teal-bdr);color:var(--teal2)}
-
 @media(max-width:820px){
-  .hero{grid-template-columns:1fr}
+  nav{padding:0 1.4rem}
+  section{padding:3.5rem 1.4rem}
+  .hero{grid-template-columns:1fr;padding:5rem 1.4rem 3.5rem}
   .hero-right{display:none}
   .hero-stats{flex-wrap:wrap;gap:2rem}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}
+  .skills-grid{grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
@@ -210,14 +176,13 @@ footer span{color:var(--teal)}
   <a href="index.html" class="nav-logo">Peace <span>Adaobi.</span></a>
   <div class="nav-links">
     <a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
   <div class="hero-left">
     <div class="hero-pill"><span class="dot"></span> Data Analyst</div>
@@ -236,12 +201,11 @@ footer span{color:var(--teal)}
   </div>
   <div class="hero-right">
     <div class="profile-frame">
-      
-     <img src="profile.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:6px"/> 
+      <img src="profile.jpeg" style="width:100%;height:100%;object-fit:cover;border-radius:6px"/>
+    </div>
   </div>
 </div>
 
-<!-- PROJECTS -->
 <section id="projects">
   <p class="sec-label">My Work</p>
   <h2 class="sec-title">Featured Projects</h2>
@@ -249,7 +213,6 @@ footer span{color:var(--teal)}
   <p class="sec-sub">Four real-world projects — each one shows a problem I found in data, how I investigated it, and the recommendation I made to solve it.</p>
   <div class="proj-grid">
 
-    <!-- Card 1: Complaints -->
     <div class="proj-card">
       <div class="proj-card-thumb thumb-c">
         📋
@@ -278,7 +241,6 @@ footer span{color:var(--teal)}
       </div>
     </div>
 
-    <!-- Card 2: Railway -->
     <div class="proj-card">
       <div class="proj-card-thumb thumb-r">
         🚉
@@ -307,7 +269,6 @@ footer span{color:var(--teal)}
       </div>
     </div>
 
-    <!-- Card 3: Fuel -->
     <div class="proj-card">
       <div class="proj-card-thumb thumb-f">
         ⛽
@@ -336,7 +297,6 @@ footer span{color:var(--teal)}
       </div>
     </div>
 
-    <!-- Card 4: SQL -->
     <div class="proj-card">
       <div class="proj-card-thumb thumb-s">
         🗄️
@@ -351,11 +311,11 @@ footer span{color:var(--teal)}
         </div>
         <div class="proj-row">
           <span class="proj-row-label">What I did</span>
-          <span class="proj-row-text"><strong>Designed 6 linked tables</strong> (customers, suppliers, products, orders, payments, order details) with proper foreign keys, then wrote 15+ queries to answer business questions.</span>
+          <span class="proj-row-text"><strong>Designed 6 linked tables</strong> with proper foreign keys, then wrote 15+ queries to answer real business questions.</span>
         </div>
         <div class="proj-row">
-          <span class="proj-row-label">Skills shown</span>
-          <span class="proj-row-text">JOINs, window functions (RANK), aggregations, subqueries, HAVING clauses, and full schema design — all written from scratch.</span>
+          <span class="proj-row-label">Skills</span>
+          <span class="proj-row-text">JOINs, window functions (RANK), aggregations, subqueries, HAVING clauses, and full schema design — all from scratch.</span>
         </div>
         <div class="proj-tags">
           <span class="tag">SQL</span><span class="tag">Database Design</span>
@@ -368,35 +328,101 @@ footer span{color:var(--teal)}
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <p class="sec-label">What I Work With</p>
   <h2 class="sec-title">My Toolkit</h2>
   <div class="divider"></div>
-  <p class="sec-sub">The tools I use to clean data, find patterns, and build dashboards that non-technical stakeholders can actually use.</p>
-  <div class="skills-row">
-    <div class="sk"><span class="sk-icon">📊</span><div class="sk-name">Microsoft Excel</div>
-      <div class="sk-desc">Pivot Tables · Power Query · VLOOKUP · Charts · Dashboard Design</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:90%"></div></div></div>
-    <div class="sk"><span class="sk-icon">🗄️</span><div class="sk-name">SQL</div>
-      <div class="sk-desc">Database Design · Joins · Aggregations · Window Functions · Subqueries</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div></div>
-    <div class="sk"><span class="sk-icon">📈</span><div class="sk-name">Power BI</div>
-      <div class="sk-desc">DAX Measures · Interactive Dashboards · KPI Cards · Slicers</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:72%"></div></div></div>
-    <div class="sk"><span class="sk-icon">🐍</span><div class="sk-name">Python</div>
-      <div class="sk-desc">Pandas · Data Cleaning · EDA · Automation (in progress)</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:55%"></div></div></div>
-    <div class="sk"><span class="sk-icon">🔍</span><div class="sk-name">Data Cleaning</div>
-      <div class="sk-desc">ETL · Standardisation · Null Handling · Power Query · Validation</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:86%"></div></div></div>
-    <div class="sk"><span class="sk-icon">💡</span><div class="sk-name">Analytical Thinking</div>
-      <div class="sk-desc">Root Cause Analysis · Business Recommendations · Storytelling with Data</div>
-      <div class="sk-bar"><div class="sk-fill" style="width:82%"></div></div></div>
+  <p class="sec-sub">I don't just know these tools — I've used every one of them on real projects to solve real business problems. Here's what I bring to a data team.</p>
+  <div class="skills-grid">
+    <div class="sk">
+      <span class="sk-icon">📊</span>
+      <div class="sk-name">Microsoft Excel</div>
+      <div class="sk-desc">My strongest tool. I use Excel end-to-end — from raw data cleaning all the way to final dashboard delivery.</div>
+      <div class="sk-tools">Pivot Tables · Power Query · VLOOKUP / XLOOKUP · Charts · Dashboard Design · Forecasting</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:92%"></div></div>
+    </div>
+    <div class="sk">
+      <span class="sk-icon">🗄️</span>
+      <div class="sk-name">SQL</div>
+      <div class="sk-desc">I can design databases from scratch and write complex queries that answer real business questions — not just basic SELECTs.</div>
+      <div class="sk-tools">Multi-table JOINs · Window Functions · Aggregations · Subqueries · HAVING · Schema Design</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:78%"></div></div>
+    </div>
+    <div class="sk">
+      <span class="sk-icon">📈</span>
+      <div class="sk-name">Power BI</div>
+      <div class="sk-desc">I build interactive dashboards that non-technical stakeholders can actually use and act on — not just read.</div>
+      <div class="sk-tools">DAX Measures · KPI Cards · Interactive Slicers · Drill-Through · Report Design</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:72%"></div></div>
+    </div>
+    <div class="sk">
+      <span class="sk-icon">🐍</span>
+      <div class="sk-name">Python</div>
+      <div class="sk-desc">Currently building Python skills through structured internship projects — focused on data analysis and automation.</div>
+      <div class="sk-tools">Pandas · Data Cleaning · Exploratory Data Analysis · Automation (in progress)</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:55%"></div></div>
+    </div>
+    <div class="sk">
+      <span class="sk-icon">🔍</span>
+      <div class="sk-name">Data Cleaning</div>
+      <div class="sk-desc">I treat data cleaning as the most critical step — bad data produces bad insights no matter how good the analysis.</div>
+      <div class="sk-tools">ETL · Null Handling · Standardisation · Power Query · Deduplication · Validation</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:88%"></div></div>
+    </div>
+    <div class="sk">
+      <span class="sk-icon">💡</span>
+      <div class="sk-name">Analytical Thinking</div>
+      <div class="sk-desc">I don't just describe data — I diagnose it. I find root causes, question assumptions, and tie every finding back to the business.</div>
+      <div class="sk-tools">Root Cause Analysis · 5-Why Framework · Process Optimisation · Business Recommendations</div>
+      <div class="sk-bar"><div class="sk-fill" style="width:85%"></div></div>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
+<section id="experience">
+  <p class="sec-label">Professional Experience</p>
+  <h2 class="sec-title">Where I've Worked</h2>
+  <div class="divider"></div>
+  <p class="sec-sub">Hands-on experience applying data thinking in real environments — collecting, interpreting, and communicating data to support decisions that matter.</p>
+
+  <div class="exp-card">
+    <div class="exp-top">
+      <div>
+        <div class="exp-company">Hayat Kimya</div>
+        <div class="exp-role">Data &amp; Research Analyst Intern — R&amp;D Department</div>
+      </div>
+      <div class="exp-period">Jan 2025 – Dec 2025</div>
+    </div>
+    <p class="exp-p">Applied data collection, analysis, and interpretation in a fast-paced manufacturing R&amp;D environment. Worked with product performance datasets to uncover patterns, identify quality gaps, and support data-driven decisions across the product development lifecycle.</p>
+    <ul class="exp-bullets">
+      <li>Collected and analysed product performance data across multiple product lines — identifying quality trends, efficiency gaps, and performance benchmarks that informed production decisions</li>
+      <li>Conducted structured comparative analysis between company products and competitor products, translating findings into clear recommendations for the development team</li>
+      <li>Tracked and interpreted experimental results across testing cycles — building the habit of rigorous documentation and evidence-based conclusions that I now apply to every data project</li>
+      <li>Produced data summaries and reports communicated directly to operational stakeholders, ensuring findings were clear, accurate, and actionable — not just technically correct</li>
+      <li>Developed a systematic approach to spotting patterns in complex datasets — a skill that directly shapes how I approach exploratory data analysis today</li>
+    </ul>
+  </div>
+
+  <div class="exp-card">
+    <div class="exp-top">
+      <div>
+        <div class="exp-company">Tech Studio Academy</div>
+        <div class="exp-role">Data Analytics Intern — SQL · Python · Power BI</div>
+      </div>
+      <div class="exp-period">2025 – Present</div>
+    </div>
+    <p class="exp-p">Currently completing a structured, project-based data analytics internship covering SQL database design, Python data analysis, and Power BI visualisation — building real outputs that answer genuine management questions across all three tools. Each project in the programme is hands-on and applied to real business scenarios.</p>
+    <ul class="exp-bullets">
+      <li>Designed and built a fully normalised 6-table relational database for a Nigerian retail business — covering customers, suppliers, products, orders, order details, and payments — with correct primary keys, foreign keys, and referential integrity enforced throughout</li>
+      <li>Wrote 15+ SQL queries that answered real business questions: identifying the most loyal customers, flagging slow-moving products, ranking suppliers by volume, calculating monthly revenue trends, and isolating customers who had never placed an order</li>
+      <li>Applied advanced SQL techniques including multi-table JOINs across 5 tables, RANK() window functions, correlated subqueries, DATE_FORMAT for time-series analysis, and HAVING clauses for filtered aggregations — all applied to business problems, not practice exercises</li>
+      <li>Demonstrated that structured data work produces real insight: queries like "slow-moving products" and "loyal customers" are the kind of outputs a business manager needs weekly — and I built them from scratch</li>
+      <li>Currently completing a Python data analysis project using Pandas — focused on data cleaning, transformation, and exploratory analysis — further expanding the technical toolkit I bring to a data team</li>
+    </ul>
+  </div>
+
+</section>
+
 <section id="about">
   <p class="sec-label">About Me</p>
   <h2 class="sec-title">The Person Behind the Data</h2>
@@ -406,7 +432,7 @@ footer span{color:var(--teal)}
       <div class="about-degree">🎓 <span>B.Sc. Pure &amp; Applied Chemistry</span> — Ladoke Akintola University of Technology (LAUTECH)</div>
       <p>Hi, I'm <strong>Okedinachi Peace Adaobi</strong> — a data analytics enthusiast with a strong foundation in analytical thinking, problem-solving, and evidence-based decision making. My chemistry degree trained me in data collection, analysis, and interpretation — skills I now apply directly to real-world business datasets.</p>
       <p>Through hands-on projects and industry experience, I uncover patterns, generate insights, and communicate findings that support business and operational decisions. I work with <strong>Excel, SQL, Power BI, and Python</strong> — and I believe the best analysis is not the most complicated one, but the one that answers the right question in the clearest way.</p>
-      <p>I am currently completing internships with <strong>TDI Community, Beez Academy,</strong> and <strong>Tech Studio Academy</strong>, and I'm open to entry-level analyst roles where I can contribute and keep growing.</p>
+      <p>I am currently completing internships with <strong>TDI Community, Beez Academy,</strong> and <strong>Tech Studio Academy</strong>, and I'm open to entry-level analyst roles where I can contribute meaningfully and keep growing.</p>
       <div style="margin-top:1.4rem;display:flex;gap:0.9rem;flex-wrap:wrap">
         <a href="YOUR_CV_LINK_HERE" class="btn-p">Download My CV</a>
         <a href="#contact" class="btn-o">Get In Touch</a>
@@ -421,49 +447,6 @@ footer span{color:var(--teal)}
   </div>
 </section>
 
-  <!-- EXPERIENCE -->
-<section id="experience" style="background:var(--bg1);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);padding:5rem 3rem;position:relative;z-index:1">
-  <p class="sec-label">Professional Experience</p>
-  <h2 class="sec-title">Where I've Worked</h2>
-  <div class="divider"></div>
-  <p class="sec-sub">Real-world experience that built my analytical precision, documentation skills, and evidence-based thinking.</p>
-
-  <div style="background:var(--card);border:1px solid var(--bdr);border-left:2.5px solid var(--teal);border-radius:4px;padding:2rem 2.5rem;max-width:800px;margin-bottom:1.4rem">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:0.3rem">
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--txt)">Hayat Kimya</div>
-        <div style="font-size:0.72rem;color:var(--txt3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.2rem">Research &amp; Development Intern — R&amp;D Department</div>
-      </div>
-      <div style="font-size:0.66rem;color:var(--teal);border:1px solid var(--teal-bdr);background:var(--teal-dim);padding:0.22rem 0.75rem;border-radius:2px;letter-spacing:0.1em;white-space:nowrap;height:fit-content">Jan 2025 – Dec 2025</div>
-    </div>
-    <p style="font-size:0.86rem;color:var(--txt2);line-height:1.88;margin-bottom:1.2rem">Worked within the R&amp;D Department of a manufacturing company, contributing to product performance evaluation and competitive analysis. The role involved collecting, analysing, and interpreting experimental data — directly building the analytical rigour I apply to data projects today.</p>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Analysed product performance data to evaluate quality and efficiency metrics across multiple product lines</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Conducted comparative analysis between company products and competitors to inform product development strategy</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Assisted in testing and evaluating product formulations across development cycles, documenting results with precision</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Interpreted experimental results and produced reports to support data-informed operational decisions</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>This experience strengthened my ability to analyse data, identify trends, and translate findings into actionable insights</li>
-    </ul>
-  </div>
-
-  <div style="background:var(--card);border:1px solid var(--bdr);border-left:2.5px solid var(--teal);border-radius:4px;padding:2rem 2.5rem;max-width:800px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:1rem;margin-bottom:0.3rem">
-      <div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;color:var(--txt)">Tech Studio Academy</div>
-        <div style="font-size:0.72rem;color:var(--txt3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.2rem">SQL &amp; Data Analytics Intern</div>
-      </div>
-      <div style="font-size:0.66rem;color:var(--teal);border:1px solid var(--teal-bdr);background:var(--teal-dim);padding:0.22rem 0.75rem;border-radius:2px;letter-spacing:0.1em;white-space:nowrap;height:fit-content">2025 – Present</div>
-    </div>
-    <p style="font-size:0.86rem;color:var(--txt2);line-height:1.88;margin-bottom:1.2rem">Completed a structured SQL internship programme — designing a full relational database from scratch and writing business intelligence queries to answer real management questions. Currently completing a Python data analysis project within the same programme.</p>
-    <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem">
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Designed and built a 6-table relational sales inventory database with proper primary keys, foreign keys, and referential integrity constraints</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Wrote 15+ SQL queries answering real business questions — multi-table JOINs, window functions (RANK), aggregations, subqueries, and HAVING clauses</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Populated the database with realistic Nigerian retail data across 20 customers, 10 suppliers, 30 products, and 40 orders</li>
-      <li style="font-size:0.83rem;color:var(--txt2);line-height:1.7;padding-left:1.3rem;position:relative"><span style="position:absolute;left:0;color:var(--teal)">—</span>Currently completing a Python data analysis project using Pandas for data cleaning, transformation, and exploratory analysis</li>
-    </ul>
-  </div>
-</section>
-<!-- CONTACT -->
 <section id="contact">
   <p class="sec-label">Get In Touch</p>
   <h2 class="sec-title">Let's Work Together</h2>
@@ -476,4 +459,5 @@ footer span{color:var(--teal)}
 </section>
 
 <footer>© 2026 <span>Peace Adaobi</span> &nbsp;·&nbsp; Data Analyst &nbsp;·&nbsp; Built with purpose</footer>
-</body></html>
+</body>
+</html>
